@@ -1,5 +1,27 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: "Backup Plan template for AWS Backups"
+Parameters:
+
+  TagKey:
+    Type: String
+    Default: backup
+    Description: Enter the tag KEY of the AWS resource
+
+  TagValue:
+    Type: String
+    Default: daily
+    Description: Enter the tag VALUE of the AWS resource
+
+  LifecycleDeleteAfterDays:
+    Type: Number
+    Default: 366
+    Description: Specifies the number of days after creation that a recovery point is deleted. Must be greater than 90 days plus MoveToColdStorageAfterDays.
+  
+  LifecycleMoveToColdStorageAfterDays:
+    Type: Number
+    Default: 31
+    Description: Specifies the number of days after creation that a recovery point is moved to cold storage.
+
 Resources:
   BackupVault:
     Type: "AWS::Backup::BackupVault"
@@ -19,8 +41,10 @@ Resources:
             StartWindowMinutes: 60
             CompletionWindowMinutes : 120
             Lifecycle:
-              DeleteAfterDays: 366
-              MoveToColdStorageAfterDays : 31
+              DeleteAfterDays:
+                Ref: LifecycleDeleteAfterDays
+              MoveToColdStorageAfterDays:
+                Ref: LifecycleMoveToColdStorageAfterDays
 
     DependsOn: BackupVault  
   BackupRole:
@@ -46,7 +70,9 @@ Resources:
         IamRoleArn: !GetAtt BackupRole.Arn
         ListOfTags:
           - ConditionType: "STRINGEQUALS"
-            ConditionKey: "backup"
-            ConditionValue: "daily"
+            ConditionKey:
+              Ref: TagKey
+            ConditionValue:
+              Ref: TagValue
       BackupPlanId: !Ref BackupPlan
     DependsOn: BackupPlan      
