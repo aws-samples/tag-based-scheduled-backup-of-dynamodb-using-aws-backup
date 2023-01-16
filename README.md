@@ -6,9 +6,9 @@ This solution helps you scale backups within your organization by implementing a
 
 The steps to implement the solution are:
 
-    + Launch an AWS CloudFormation template to create the required resources.
-    + Add tags to the DynamoDB table.
-    + Monitor the backup.
+ + Launch an AWS CloudFormation template to create the required resources.
+ + Add tags to the DynamoDB table.
+ + Monitor the backup.
 
 ## Create the resources for the solution
 
