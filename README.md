@@ -39,11 +39,11 @@ BackupPlan:
 
 Before getting started, we set up our resources. For this post, we use the us-east-1 Region.
 
-    1. Deploy the AWS resource using the provided AWS CloudFormation template:
+    1.Deploy the AWS resource using the provided AWS CloudFormation template:
 	
-![LaunchStack](/image/LaunchStack.png) (https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/template?stackName=tag-based-backup-stack&templateURL=https://aws-blogs-artifacts-public.s3.amazonaws.com/artifacts/DBBLOG-1898/aws_backup.yaml)
+![LaunchStack][(/image/LaunchStack.png)] (https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/template?stackName=tag-based-backup-stack&templateURL=https://aws-blogs-artifacts-public.s3.amazonaws.com/artifacts/DBBLOG-1898/aws_backup.yaml)
 	
-    2. Enter a Stack name and provide the parameters for your backup strategy.
+    2.Enter a Stack name and provide the parameters for your backup strategy.
 
         + LifecycleDeleteAfterDays: The number of days after creation that a recovery point is deleted.
         + LifecycleMoveToColdStorageAfterDays: The number of days after creation that a recovery point is moved to cold storage.
@@ -51,12 +51,12 @@ Before getting started, we set up our resources. For this post, we use the us-ea
         + TagValue: The tag value associated with your DynamoDB tables to be backed up. You can use this field to add one tag value. To add multiple tag values, follow the Resource tag documentation to modify the CloudFormation stack file that you downloaded from GitHub.
    
    
-   3. Choose Next.
+   3.Choose Next.
    
    [Stack Details](/image/dbblog-1898-image001.png)
 
-   4. Accept the default settings and choose Next.
-   5. Select the checkbox next to I Acknowledge that AWS CloudFormation might create IAM resources and choose Create stack.
+   4.Accept the default settings and choose Next.
+   5.Select the checkbox next to I Acknowledge that AWS CloudFormation might create IAM resources and choose Create stack.
 
 [Create Stack](/image/dbblog-1898-image002.png)
 
