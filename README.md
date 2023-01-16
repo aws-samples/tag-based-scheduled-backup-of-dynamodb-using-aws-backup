@@ -49,7 +49,7 @@ Before getting started, we set up our resources. For this post, we use the us-ea
    + TagValue: The tag value associated with your DynamoDB tables to be backed up. You can use this field to add one tag value. To add multiple tag values, follow the Resource tag documentation to modify the CloudFormation stack file that you downloaded from GitHub.
    
    
- 3.Choose Next.
+ 3. Choose Next.
    
 ![Stack Details](/image/dbblog-1898-image001.png)
 
