@@ -39,11 +39,11 @@ BackupPlan:
 
 Before getting started, we set up our resources. For this post, we use the us-east-1 Region.
 
-    + Deploy the AWS resource using the provided AWS CloudFormation template:
+ 1. Deploy the AWS resource using the provided AWS CloudFormation template:
 	
 ![LaunchStack][(/image/LaunchStack.png)] (https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/template?stackName=tag-based-backup-stack&templateURL=https://aws-blogs-artifacts-public.s3.amazonaws.com/artifacts/DBBLOG-1898/aws_backup.yaml)
 	
-    + Enter a Stack name and provide the parameters for your backup strategy.
+ 2. Enter a Stack name and provide the parameters for your backup strategy.
 
         + LifecycleDeleteAfterDays: The number of days after creation that a recovery point is deleted.
         + LifecycleMoveToColdStorageAfterDays: The number of days after creation that a recovery point is moved to cold storage.
