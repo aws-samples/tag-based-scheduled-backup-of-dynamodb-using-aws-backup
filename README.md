@@ -53,12 +53,12 @@ Before getting started, we set up our resources. For this post, we use the us-ea
    
  3.Choose Next.
    
-[Stack Details](/image/dbblog-1898-image001.png)
+![Stack Details](/image/dbblog-1898-image001.png)
 
  4. Accept the default settings and choose Next.
  5. Select the checkbox next to I Acknowledge that AWS CloudFormation might create IAM resources and choose Create stack.
 
-[Create Stack](/image/dbblog-1898-image002.png)
+![Create Stack](/image/dbblog-1898-image002.png)
 
     Alternatively , you can download the CloudFormation stack file from GitHub. Sign in to the AWS Management Console and navigate to CloudFormation. Choose Create stack and select With new resources (standard). Select Upload a template file and upload the stack file.
 
