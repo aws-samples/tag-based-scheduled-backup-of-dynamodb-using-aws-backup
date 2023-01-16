@@ -39,9 +39,7 @@ BackupPlan:
 
 Before getting started, we set up our resources. For this post, we use the us-east-1 Region.
 
- 1. Deploy the AWS resource using the provided AWS CloudFormation template:
-	
-[Launch Stack](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/template?stackName=tag-based-backup-stack&templateURL=https://aws-blogs-artifacts-public.s3.amazonaws.com/artifacts/DBBLOG-1898/aws_backup.yaml)
+ 1. Deploy the AWS resource using the provided AWS CloudFormation template: [Launch Stack](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/template?stackName=tag-based-backup-stack&templateURL=https://aws-blogs-artifacts-public.s3.amazonaws.com/artifacts/DBBLOG-1898/aws_backup.yaml)
 	
  2. Enter a Stack name and provide the parameters for your backup strategy.
 
@@ -60,7 +58,7 @@ Before getting started, we set up our resources. For this post, we use the us-ea
 
 ![Create Stack](/image/dbblog-1898-image002.png)
 
-    Alternatively , you can download the CloudFormation stack file from GitHub. Sign in to the AWS Management Console and navigate to CloudFormation. Choose Create stack and select With new resources (standard). Select Upload a template file and upload the stack file.
+Alternatively , you can download the CloudFormation stack file from GitHub. Sign in to the AWS Management Console and navigate to CloudFormation. Choose Create stack and select With new resources (standard). Select Upload a template file and upload the stack file.
 
 
 ## Security
